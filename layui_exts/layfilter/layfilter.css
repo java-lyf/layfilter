@@ -1,0 +1,49 @@
+.filterTable{
+    width: 100%;
+    border-spacing: 2px;
+    border-collapse: inherit;
+}
+.filterTable td {
+    border: solid 1px #cccccc;
+    border-collapse: collapse;
+}
+.filterTable .item-title{
+    text-align: center;
+    background-color: #eeeeee;
+    min-width: 100px;
+}
+.filterTable .items {
+    padding-left: 10px;
+}
+.filterTable td .layfilter-ul li{
+    float: left;
+    display: inline;
+    margin: 4px;
+    cursor: pointer;
+    cursor: hand;
+}
+
+.filterTable td .layfilter-ul .layfilter-item a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding-left: 2px;
+    border: solid 1px;
+    border-color: transparent!important;
+    border-color: #ffffff;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.filterTable td .layfilter-ul .layfilter-item-checked a:hover{
+	background-image: url(images/filterCloseHover.gif);
+}
+.filterTable td .layfilter-ul .layfilter-item-checked a{
+    width: 100%;
+    border: solid 1px #009E94!important;
+    background-image: url(images/filterClose.gif);
+    background-repeat: no-repeat;
+    background-position: 98% 40%;
+
+    
+}
