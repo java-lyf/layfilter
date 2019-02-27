@@ -68,8 +68,17 @@ layui.define(['jquery', 'layer'], function (exports){
                 }
                 var itemType = $(this).parent().parent().attr('type');
                 var name =  $(this).parent().parent().attr('name');
+                //取消选择
                 if($(this).parent().hasClass('layfilter-item-checked')){
                     $(this).parent().removeClass('layfilter-item-checked');
+                    var obj = chekedArr[name]||[];
+                    for(var i=0;i<obj.length;i++){
+                        if(obj[i].value==$(this).parent().attr('value')){
+                            obj.splice(i, 1);
+                            break;
+                        }
+                    }
+                    chekedArr[name] = obj;
                 }else{
                     if(itemType && ('checbox' == itemType || 'radio' == itemType)){
                         //判断类型
@@ -104,7 +113,7 @@ layui.define(['jquery', 'layer'], function (exports){
                     callback.call(this,obj);
                 });
             }else{
-                console.error('handleClick传入的参数不是一个函数');
+                console.error('传入的参数不是一个函数');
             }
         }
     }

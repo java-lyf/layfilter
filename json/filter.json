@@ -8,17 +8,17 @@
             "type": "checbox",
             "data": [
                 {
-                    "value": "1212",
+                    "value": "123",
                     "name": "儿童",
                     "checked": "true"
                 },
                 {
-                    "value": "1212",
+                    "value": "124",
                     "name": "生活",
                     "checked": "true"
                 },
                 {
-                    "value": "123212",
+                    "value": "125",
                     "name": "居家",
                     "checked": "false"
                 }
@@ -30,16 +30,16 @@
             "type": "radio",
             "data": [
                 {
-                    "value": "1212",
+                    "value": "126",
                     "name": "100~200",
                     "disabled": "true"
                 },
                 {
-                    "value": "1212",
+                    "value": "127",
                     "name": "200~500"
                 },
                 {
-                    "value": "1212",
+                    "value": "128",
                     "name": "500~100"
                 }
             ]
@@ -50,19 +50,19 @@
             "type": "radio",
             "data": [
                 {
-                    "value": "1212",
+                    "value": "129",
                     "name": "武汉"
                 },
                 {
-                    "value": "1212",
+                    "value": "130",
                     "name": "宜昌"
                 },
                 {
-                    "value": "1212",
+                    "value": "131",
                     "name": "黄冈"
                 },
                 {
-                    "value": "1212",
+                    "value": "132",
                     "name": "咸宁"
                 }
             ]
@@ -73,63 +73,63 @@
             "type": "checbox",
             "data": [
                 {
-                    "value": "1212",
+                    "value": "133",
                     "name": "半天"
                 },
                 {
-                    "value": "1212",
+                    "value": "134",
                     "name": "1天"
                 },
                 {
-                    "value": "1212",
+                    "value": "135",
                     "name": "2天"
                 },
                 {
-                    "value": "1212",
+                    "value": "136",
                     "name": "3天"
                 },
                 {
-                    "value": "1212",
+                    "value": "137",
                     "name": "一周"
                 },
                 {
-                    "value": "1212",
+                    "value": "138",
                     "name": "半月"
                 },
                 {
-                    "value": "1212",
+                    "value": "139",
                     "name": "一月"
                 },
                 {
-                    "value": "1212",
+                    "value": "140",
                     "name": "两个月"
                 },
                 {
-                    "value": "1212",
+                    "value": "141",
                     "name": "三个月"
                 },
                 {
-                    "value": "1212",
+                    "value": "142",
                     "name": "半年"
                 },
                 {
-                    "value": "1212",
+                    "value": "143",
                     "name": "一年"
                 },
                 {
-                    "value": "1212",
+                    "value": "144",
                     "name": "两年"
                 },
                 {
-                    "value": "1212",
+                    "value": "145",
                     "name": "三年"
                 },
                 {
-                    "value": "1212",
+                    "value": "146",
                     "name": "四年"
                 },
                 {
-                    "value": "1212",
+                    "value": "147",
                     "name": "五年"
                 }
             ]
