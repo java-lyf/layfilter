@@ -15,6 +15,8 @@
 <div style="margin-top: 10px;">
   <button class="layui-btn layui-btn-primary" id="getvalBtn">获取选中值</button>
   <button class="layui-btn layui-btn-primary" id="getDataBtn">查看数据接口出参</button>
+  <button class="layui-btn layui-btn-primary" id="resetBtn">重置</button>
+  <a class="layui-btn" href="http://www.lyfweb.cn" target="_blank">个人博客（在建ing）</a>
 </div>
 
 <table class="layui-hide" id="demo" lay-filter="test"></table>
@@ -67,7 +69,7 @@ layui.use([ 'layer', 'table','laymock','layfilter'], function(){
 
   layfilter.render({
       elem:'#layfilter',
-      itemWidth:[100],
+      itemWidth:[50,60,70,80],
       height:200,
       url:'/json/filter.json',
       dataSource:dataSource,
@@ -81,6 +83,12 @@ layui.use([ 'layer', 'table','laymock','layfilter'], function(){
   $("#getDataBtn").click(function(){
     $.getJSON('/json/filter.json',function(res){
       layer.alert(JSON.stringify(res));
+    })
+  });
+  $("#resetBtn").click(function(){
+    layfilter.resetFilter(function(){
+      console.log(1);
+      layer.msg('重置了！');
     })
   })
   layfilter.on('click(layfilter)',function(obj){

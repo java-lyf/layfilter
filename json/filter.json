@@ -3,134 +3,294 @@
     "msg": "success",
     "data": [
         {
-            "title": "类别",
-            "name": "category",
+            "title": "语言",
+            "name": "language",
             "type": "checbox",
             "data": [
                 {
-                    "value": "123",
-                    "name": "儿童",
+                    "value": "1001",
+                    "name": "国语",
                     "checked": "true"
                 },
                 {
-                    "value": "124",
-                    "name": "生活",
+                    "value": "1002",
+                    "name": "粤语",
                     "checked": "true"
                 },
                 {
-                    "value": "125",
-                    "name": "居家",
+                    "value": "1003",
+                    "name": "英语",
+                    "checked": "false"
+                },
+                {
+                    "value": "1004",
+                    "name": "韩语",
+                    "checked": "false"
+                },
+                {
+                    "value": "1005",
+                    "name": "日语",
+                    "checked": "false"
+                },
+                {
+                    "value": "1006",
+                    "name": "法语",
+                    "checked": "false"
+                },
+                {
+                    "value": "1007",
+                    "name": "其他",
                     "checked": "false"
                 }
             ]
         },
         {
-            "title": "价格",
-            "name": "price",
+            "title": "类型",
+            "name": "type",
             "type": "radio",
             "data": [
                 {
-                    "value": "126",
-                    "name": "100~200",
+                    "value": "2001",
+                    "name": "动作",
                     "disabled": "true"
                 },
                 {
-                    "value": "127",
-                    "name": "200~500"
+                    "value": "2002",
+                    "name": "喜剧"
                 },
                 {
-                    "value": "128",
-                    "name": "500~100"
+                    "value": "2003",
+                    "name": "爱情"
+                },
+                {
+                    "value": "2004",
+                    "name": "科幻"
+                },
+                {
+                    "value": "2005",
+                    "name": "灾难"
+                },
+                {
+                    "value": "2006",
+                    "name": "恐怖"
+                },
+                {
+                    "value": "2007",
+                    "name": "悬疑"
+                },
+                {
+                    "value": "2008",
+                    "name": "奇幻"
+                },
+                {
+                    "value": "2009",
+                    "name": "战争"
+                },
+                {
+                    "value": "2010",
+                    "name": "犯罪"
+                },
+                {
+                    "value": "2011",
+                    "name": "惊悚"
+                },
+                {
+                    "value": "2012",
+                    "name": "动画"
+                },
+                {
+                    "value": "2013",
+                    "name": "伦理"
+                },
+                {
+                    "value": "2014",
+                    "name": "剧情"
+                },
+                {
+                    "value": "2015",
+                    "name": "冒险"
+                },
+                {
+                    "value": "2016",
+                    "name": "历史"
+                },
+                {
+                    "value": "2016",
+                    "name": "家庭"
+                },
+                {
+                    "value": "2018",
+                    "name": "歌舞"
+                },
+                {
+                    "value": "2019",
+                    "name": "传记"
+                },
+                {
+                    "value": "2020",
+                    "name": "音乐"
+                },
+                {
+                    "value": "2021",
+                    "name": "西部"
+                },
+                {
+                    "value": "2022",
+                    "name": "运动"
+                },
+                {
+                    "value": "2023",
+                    "name": "古装"
+                },
+                {
+                    "value": "2024",
+                    "name": "武侠"
+                },
+                {
+                    "value": "2025",
+                    "name": "短片"
+                },
+                {
+                    "value": "2026",
+                    "name": "儿童"
+                },
+                {
+                    "value": "2027",
+                    "name": "纪录片"
+                },
+                {
+                    "value": "2028",
+                    "name": "鬼怪"
+                },
+                {
+                    "value": "2029",
+                    "name": "舞台艺术"
                 }
             ]
         },
         {
-            "title": "城市",
-            "name": "city",
+            "title": "年代",
+            "name": "year",
             "type": "radio",
             "data": [
                 {
-                    "value": "129",
-                    "name": "武汉"
+                    "value": "3001",
+                    "name": "2019"
                 },
                 {
-                    "value": "130",
-                    "name": "宜昌"
+                    "value": "3002",
+                    "name": "2018"
                 },
                 {
-                    "value": "131",
-                    "name": "黄冈"
+                    "value": "3003",
+                    "name": "2017"
                 },
                 {
-                    "value": "132",
-                    "name": "咸宁"
+                    "value": "3004",
+                    "name": "2016"
+                },
+                {
+                    "value": "3005",
+                    "name": "2015"
+                },
+                {
+                    "value": "3006",
+                    "name": "2014"
+                },
+                {
+                    "value": "3007",
+                    "name": "2013"
+                },
+                {
+                    "value": "3008",
+                    "name": "2012"
+                },
+                {
+                    "value": "3009",
+                    "name": "2011"
+                },
+                {
+                    "value": "3010",
+                    "name": "2010"
+                },
+                {
+                    "value": "3011",
+                    "name": "2009"
+                },
+                {
+                    "value": "3012",
+                    "name": "2008"
+                },
+                {
+                    "value": "3013",
+                    "name": "2007以前"
                 }
             ]
         },
         {
-            "title": "耗时",
-            "name": "day",
+            "title": "地区",
+            "name": "area",
             "type": "checbox",
             "data": [
                 {
-                    "value": "133",
-                    "name": "半天"
+                    "value": "4001",
+                    "name": "大陆"
                 },
                 {
-                    "value": "134",
-                    "name": "1天"
+                    "value": "4002",
+                    "name": "香港"
                 },
                 {
-                    "value": "135",
-                    "name": "2天"
+                    "value": "4003",
+                    "name": "台湾"
                 },
                 {
-                    "value": "136",
-                    "name": "3天"
+                    "value": "4004",
+                    "name": "美国"
                 },
                 {
-                    "value": "137",
-                    "name": "一周"
+                    "value": "4005",
+                    "name": "法国"
                 },
                 {
-                    "value": "138",
-                    "name": "半月"
+                    "value": "4006",
+                    "name": "英国"
                 },
                 {
-                    "value": "139",
-                    "name": "一月"
+                    "value": "4007",
+                    "name": "日本"
                 },
                 {
-                    "value": "140",
-                    "name": "两个月"
+                    "value": "4008",
+                    "name": "韩国"
                 },
                 {
-                    "value": "141",
-                    "name": "三个月"
+                    "value": "4009",
+                    "name": "德国"
                 },
                 {
-                    "value": "142",
-                    "name": "半年"
+                    "value": "4010",
+                    "name": "泰国"
                 },
                 {
-                    "value": "143",
-                    "name": "一年"
+                    "value": "4011",
+                    "name": "印度"
                 },
                 {
-                    "value": "144",
-                    "name": "两年"
+                    "value": "4012",
+                    "name": "意大利"
                 },
                 {
-                    "value": "145",
-                    "name": "三年"
+                    "value": "4013",
+                    "name": "西班牙"
                 },
                 {
-                    "value": "146",
-                    "name": "四年"
+                    "value": "4014",
+                    "name": "加拿大胜多负少"
                 },
                 {
-                    "value": "147",
-                    "name": "五年"
+                    "value": "4015",
+                    "name": "其他"
                 }
             ]
         }

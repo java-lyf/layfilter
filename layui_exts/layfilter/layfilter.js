@@ -1,6 +1,6 @@
 layui.define(['jquery', 'layer'], function (exports){
     var $ = layui.jquery;
-    var chekedArr = {};
+    var checkedArr = {};
     var layfilter = {
         render:function(options){
             var url = options.url;
@@ -30,8 +30,7 @@ layui.define(['jquery', 'layer'], function (exports){
             var $table = $('<table class="filterTable"></table>');
             for(var i=0;i<dataSource.length;i++){
                 var $tr =$('<tr></tr>');
-                var $td1 = $('<td class="item-title">'+dataSource[i].title+':</td>');
-                var $td2 = $('<td class="items"></td>');
+                var $td2 = null;
                 var type = dataSource[i].type;
                 if(!type){
                     console.warn('第'+(i+1)+'个元素的类型[type]为空设为默认值[radio]');
@@ -49,18 +48,25 @@ layui.define(['jquery', 'layer'], function (exports){
                     }
                     //判断是否禁用
                     if(item[j].disabled && item[j].disabled=='true'){
-                        $ul.append('<li value="'+item[j].value+'" style="width:'+width+'px;height: 28px;line-height: 28px;" class="'+className+'"><a disabled="disabled" class="layui-disabled">'+item[j].name+'</a></li>');
+                        $ul.append('<li value="'+item[j].value+'" style="width:'+width+'px;height: 28px;line-height: 28px;" class="'+className+'"><a disabled="disabled" class="layui-disabled" title="'+item[j].name+'">'+item[j].name+'</a></li>');
                     }else{
-                        $ul.append('<li value="'+item[j].value+'" style="width:'+width+'px;height: 28px;line-height: 28px;" class="'+className+'"><a>'+item[j].name+'</a></li>');
+                        $ul.append('<li value="'+item[j].value+'" style="width:'+width+'px;height: 28px;line-height: 28px;" class="'+className+'"><a title="'+item[j].name+'">'+item[j].name+'</a></li>');
                     }
                     
                 }
+                if(dataSource[i].title){
+                    var $td1 = $('<td class="item-title">'+dataSource[i].title+':</td>');
+                    $tr.append($td1);
+                    $td2 = $('<td class="items"></td>');
+                }else{
+                    $td2 = $('<td colspan="2" class="items"></td>');
+                }
                 $td2.append($ul);
-                $tr.append($td1).append($td2);
+                $tr.append($td2);
                 $table.append($tr);
             }
             $dom.append($table);
-            chekedArr=arr;
+            checkedArr=arr;
             //注册点击事件
             $('.filterTable tr td li a').bind('click',function(){
                 if($(this).attr('disabled')){
@@ -71,27 +77,27 @@ layui.define(['jquery', 'layer'], function (exports){
                 //取消选择
                 if($(this).parent().hasClass('layfilter-item-checked')){
                     $(this).parent().removeClass('layfilter-item-checked');
-                    var obj = chekedArr[name]||[];
+                    var obj = checkedArr[name]||[];
                     for(var i=0;i<obj.length;i++){
                         if(obj[i].value==$(this).parent().attr('value')){
                             obj.splice(i, 1);
                             break;
                         }
                     }
-                    chekedArr[name] = obj;
+                    checkedArr[name] = obj;
                 }else{
                     if(itemType && ('checbox' == itemType || 'radio' == itemType)){
                         //判断类型
                         if('radio' == itemType){
                             var objs = $(this).parent().siblings();
-                            chekedArr[name]=[];
+                            checkedArr[name]=[];
                             for(var i=0;i<objs.length;i++){
                                 objs.eq(i).removeClass('layfilter-item-checked');
                             }
                         }
-                        var obj = chekedArr[name]||[];
+                        var obj = checkedArr[name]||[];
                         obj.push({name:$(this).text(),value:$(this).parent().attr('value')});
-                        chekedArr[name]=obj;
+                        checkedArr[name]=obj;
                         $(this).parent().addClass('layfilter-item-checked');
                     }else{
                         console.error('复选或单选类型为空？');
@@ -115,6 +121,17 @@ layui.define(['jquery', 'layer'], function (exports){
             }else{
                 console.error('传入的参数不是一个函数');
             }
+        },
+        resetFilter:function(callback){
+            for(var name in checkedArr){
+                checkedArr[name]=[];
+            }
+            var objs = $('.layfilter-item-checked');
+            for(var i=0;i<objs.length;i++){
+                objs.eq(i).removeClass('layfilter-item-checked');
+            };
+            callback();
+
         }
     }
 
@@ -123,8 +140,8 @@ layui.define(['jquery', 'layer'], function (exports){
     function getCheckData(){
         var valueJson = {};
         var nameJson = {};
-        for(var name in chekedArr){
-            var json = chekedArr[name];
+        for(var name in checkedArr){
+            var json = checkedArr[name];
             var values = '';
             var names = '';
             for(var i=0;i<json.length;i++){
