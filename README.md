@@ -2,7 +2,7 @@
 
 layu扩展组件
 
-[在线预览](http://org.lyfweb.cn)
+[在线预览](http://layui.52fansite.com)
 
 
 1.引入 laymock 和 layfilter 组件
